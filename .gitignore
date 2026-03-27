@@ -1,0 +1,35 @@
+.DS_Store
+.idea
+mdc.env
+compose.yaml
+composer.phar
+composer.lock
+config.php
+
+# -------------------------
+# See https://github.com/moodle/seed/blob/main/.gitignore
+
+# This is the .gitignore file distributed with moodle/seed.
+# Once the project is created it is not automatically updated.
+
+# The provided configuration is intended as an initial suggestion and should be modified for your requirements.
+
+# The `moodle` directory is the location that Moodle is installed in by default.
+/moodle
+
+# The `data` directory is the suggested location for data to be stored.
+# Data should not be stored in git itself.
+/data
+
+# The `testdata` directory is the suggested location for PHPUnit and Behat data to be stored.
+# Data should not be stored in git itself.
+/testdata
+
+# The `vendor` directory is used for dependencies.
+/vendor
+
+# Test coverage should not be included.
+/coverage
+
+# Do not commit composer auth files.
+auth.json
