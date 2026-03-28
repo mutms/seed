@@ -37,6 +37,21 @@ A Composer project template to seed a new Moodle LMS site with MuTMS plugins.
 
 4. Point your web server document root to `/var/www/mysite/moodle/public`.
 
+## Project structure
+
+After installation, the `mysite` directory will contain:
+
+| Path | Description |
+|---|---|
+| `composer.json` | Defines Moodle version and installed plugins. |
+| `composer.lock` | Records exact installed versions. Do not edit manually. |
+| `config.php` | Moodle site configuration created during installation. |
+| `moodle/` | Moodle and all plugins installed by Composer. Do not edit directly. |
+| `data/` | Suggested location for Moodle data directory. |
+| `vendor/` | Composer dependencies. |
+
+The seed is hosted at [github.com/mutms/seed](https://github.com/mutms/seed). If you need to customise the project template, fork the repository, clone your fork to the server, and run `composer install` instead of `composer create-project`.
+
 ## Upgrade
 
 ```bash
