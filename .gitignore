@@ -7,10 +7,8 @@ composer.lock
 config.php
 
 # -------------------------
-# See https://github.com/moodle/seed/blob/main/.gitignore
-
-# This is the .gitignore file distributed with moodle/seed.
-# Once the project is created it is not automatically updated.
+# Based on https://github.com/moodle/seed/blob/main/.gitignore
+# but unlike it, this file is not included in the newly created projects.
 
 # The provided configuration is intended as an initial suggestion and should be modified for your requirements.
 
