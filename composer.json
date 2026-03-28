@@ -1,13 +1,13 @@
 {
   "name": "mutms/seed",
   "type": "project",
-  "description": "Starting template for Composer-based installation of Moodle LMS with MuTMS plugins",
+  "description": "A Composer project template to seed a new Moodle LMS site with MuTMS plugins",
   "homepage": "https://github.com/mutms/seed",
   "license": "GPL-3.0-or-later",
   "require": {
     "moodle/composer-installer": "*",
     "moodle/moodle-composer-scaffold": "*",
-    "moodle/moodle": "5.1.*"
+    "moodle/moodle": ">=5.1"
   },
   "support": {
     "issues": "https://github.com/mutms/seed/issues",
