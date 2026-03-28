@@ -1,46 +1,71 @@
-# The Seed to grow your Moodle site with MuTMS plugins
+# MuTMS Seed
 
-This package can be used to install or upgrade a Moodle site with MuTMS plugins using Composer.
+A Composer project template to seed a new Moodle LMS site with MuTMS plugins.
+
+> **Note:** Multi-tenancy is not supported in this seed. For a multi-tenant setup, please refer to the [MuTMS documentation](https://docs.mutms.org).
+
+## Requirements
+
+- [Composer dependency manager](https://getcomposer.org)
+- All standard Moodle requirements — see [Moodle release notes](https://moodledev.io/general/releases)
 
 ## New site installation
 
-Requirements:
+1. Create a new project from the seed template:
 
-- PHP
-- [Composer dependency manager](https://getcomposer.org)
-- Standard Moodle requirements - see [Moodle release notes](https://moodledev.io/general/releases)
+   ```bash
+   cd /var/www
+   composer create-project mutms/seed mysite
+   cd mysite
+   ```
 
-Installation steps:
+   Composer will install Moodle and all required plugins under `moodle/`.
 
-1. Copy this seed project to your web server.
-2. Add additional required plugins.
-3. Start Composer installer.
-4. Create Moodle config.php.
+2. Add any MuTMS plugins you want, for example:
 
-For example, if you want to use Programs:
+   ```bash
+   composer require mutms/moodle-tool_muprog
+   ```
 
-```bash
-git clone https://github.com/mutms/seed.git mysite
-cd mysite
+   See [Optional plugins](#optional-plugins) below for the full list.
 
-composer require "mutms/moodle-tool_muprog"
+3. Run the update to install the required plugins:
 
-composer install
-```
+   ```bash
+   composer update
+   ```
+
+4. Point your web server document root to `/var/www/mysite/moodle/public`.
 
 ## Upgrade
 
-Upgrade steps:
-
-1. Run Composer update
-
-For example:
-
 ```bash
 cd mysite
-
 composer update
 ```
 
+This updates Moodle and all installed plugins to their latest compatible versions.
+
+## Optional plugins
+
+| Package | Description |
+|---|---|
+| `mutms/moodle-tool_muprog` | Programmes |
+| `mutms/moodle-tool_mucertify` | Certifications |
+| `mutms/moodle-tool_mutrain` | Training credits |
+| `mutms/moodle-tool_murelation` | Supervisors and teams |
+| `mutms/moodle-tool_musudo` | Privileged sessions (sudo) |
+| `mutms/moodle-tool_mupwned` | Compromised password blocking |
+| `mutms/moodle-tool_muloginas` | Log-in-as via Incognito window |
+| `mutms/moodle-tool_muhome` | Custom home pages |
+| `mutms/moodle-mod_mubook` | Interactive book |
+
+See [docs.mutms.org](https://docs.mutms.org) for full documentation on each plugin.
+
+## Moodle version
+
+This seed requires Moodle 5.1 or later.
+
 ---
-This project is based on the Seed created by Andrew Lyons at https://github.com/moodle/seed.
+
+Based on the [Moodle Seed](https://github.com/moodle/seed) project by Andrew Lyons.
