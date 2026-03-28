@@ -1,10 +1,10 @@
 .DS_Store
-.idea
-mdc.env
-compose.yaml
-composer.phar
-composer.lock
-config.php
+/.idea
+/mdc.env
+/compose.yaml
+/composer.phar
+/composer.lock
+/config.php
 
 # -------------------------
 # Based on https://github.com/moodle/seed/blob/main/.gitignore

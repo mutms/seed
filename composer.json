@@ -10,7 +10,7 @@
   "require": {
     "moodle/composer-installer": "^1.0",
     "moodle/moodle-composer-scaffold": "^1.0",
-    "moodle/moodle": "^5.1"
+    "moodle/moodle": "5.1.*"
   },
   "support": {
     "issues": "https://github.com/mutms/seed/issues",
