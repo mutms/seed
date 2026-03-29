@@ -7,11 +7,6 @@
   "keywords": ["moodle", "mutms", "lms"],
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "require": {
-    "moodle/composer-installer": "^1.0",
-    "moodle/moodle-composer-scaffold": "^1.0",
-    "moodle/moodle": "5.1.*"
-  },
   "support": {
     "issues": "https://github.com/mutms/seed/issues",
     "source": "https://github.com/mutms/seed"
@@ -24,5 +19,10 @@
     "audit": {
       "block-insecure": false
     }
+  },
+  "require": {
+    "moodle/composer-installer": "^1.0",
+    "moodle/moodle-composer-scaffold": "^1.0",
+    "moodle/moodle": "5.1.*"
   }
 }
