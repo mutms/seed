@@ -21,50 +21,58 @@ A Composer project template to seed a new Moodle 5.1.x site with MuTMS plugins.
 
    Composer will install the latest stable Moodle 5.1.x release and all required plugins under `moodle/`.
 
-2. Add any MuTMS plugins you want, for example:
+2. Add any MuTMS plugins you want:
 
    ```bash
    composer require mutms/moodle-tool_muprog
+   composer require mutms/moodle-tool_mucertify
+   composer require mutms/moodle-tool_mutrain
+   composer require mutms/moodle-tool_murelation
+   composer require mutms/moodle-tool_musudo
+   composer require mutms/moodle-tool_mupwned
+   composer require mutms/moodle-tool_muloginas
+   composer require mutms/moodle-tool_muhome
+   composer require mutms/moodle-mod_mubook
    ```
 
-   See [Optional plugins](#optional-plugins) below for the full list.
+   See [MuTMS project](https://github.com/mutms) page for a full list of available plugins.
 
-3. Run the update to install the added plugins:
+3. Point your web server document root to `/var/www/mysite/moodle/public`, or create a symlink to serve it as a subdirectory of an existing web server:
 
    ```bash
-   composer update
+   ln -s /var/www/mysite/moodle/public /var/www/html/mysite
    ```
 
-4. Point your web server document root to `/var/www/mysite/moodle/public`.
+4. Open your Moodle site in a web browser to complete installation. Composer will have already created `config.php` and set up the database during `create-project`. Visiting the site triggers Moodle upgrade to register any added plugins.
+
+> **Note:** To skip the interactive installer, place a pre-configured `config.php` in the seed directory before running `composer create-project`. In this case database installation and plugin registration must be triggered manually by visiting the site or running the CLI installer.
 
 ## Update
+
+To update Moodle and all installed plugins to their latest 5.1.x compatible versions:
 
 ```bash
 cd /var/www/mysite
 composer update
 ```
 
-This updates Moodle to the latest stable 5.1.x release and all installed plugins to their latest compatible versions.
+Then open your site in a web browser or run the CLI upgrade to apply any database changes.
+
+## Add plugins to existing site
+
+To add a new plugin to an existing site:
+
+```bash
+cd /var/www/mysite
+composer update
+composer require mutms/moodle-tool_muprog
+```
+
+Then open your site in a web browser or run the CLI upgrade to register the new plugin.
 
 ## Major version upgrade
 
 To upgrade to Moodle 5.2 or later, switch to the corresponding MuTMS seed for that release. Migration instructions will be provided once Moodle 5.2 is released.
-
-## Optional plugins
-
-| Package | Description |
-|---|---|
-| `mutms/moodle-tool_muprog` | Programmes |
-| `mutms/moodle-tool_mucertify` | Certifications |
-| `mutms/moodle-tool_mutrain` | Training credits |
-| `mutms/moodle-tool_murelation` | Supervisors and teams |
-| `mutms/moodle-tool_musudo` | Privileged sessions (sudo) |
-| `mutms/moodle-tool_mupwned` | Compromised password blocking |
-| `mutms/moodle-tool_muloginas` | Log-in-as via Incognito window |
-| `mutms/moodle-tool_muhome` | Custom home pages |
-| `mutms/moodle-mod_mubook` | Interactive book |
-
-See [docs.mutms.org](https://docs.mutms.org) for full documentation on each plugin.
 
 ## Project structure
 
