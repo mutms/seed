@@ -8,6 +8,7 @@ A Composer project template to seed a new Moodle 5.1.x site with MuTMS plugins.
 
 - [Composer dependency manager](https://getcomposer.org)
 - All standard Moodle 5.1 requirements — see [Moodle release notes](https://moodledev.io/general/releases#moodle-51)
+- Experience with web server installation and configuration
 
 ## New site installation
 
