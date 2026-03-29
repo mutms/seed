@@ -2,7 +2,7 @@
 
 A Composer project template to seed a new Moodle 5.1.x site with MuTMS plugins.
 
-> **Note:** Multi-tenancy is not supported in this seed. For a multi-tenant setup, please refer to the [MuTMS documentation](https://docs.mutms.org).
+> **Note:** For multi-tenant setups, use the [Multi-tenancy seed](https://github.com/mutms/seed-mutenancy) instead.
 
 ## Requirements
 
