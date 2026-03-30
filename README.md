@@ -20,7 +20,7 @@ A Composer project template to seed a new Moodle 5.1.x site with MuTMS plugins.
    cd mysite
    ```
 
-   Composer will install the latest stable Moodle 5.1.x release and all required plugins under `moodle/`.
+   Composer will install the latest stable Moodle 5.1.x release under `moodle/`.
 
 2. Add any MuTMS plugins you want:
 
